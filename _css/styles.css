@@ -20,6 +20,12 @@ hr {
     margin: 10px 0 30px 0;
 }
 
+
+
+/* ========================
+   Header properties
+   ======================== */
+
 .header-banner {
     background-image: url("../_images/code_background.png");
     background-position: center;
@@ -62,6 +68,12 @@ hr {
     text-align: center;
 }
 
+
+
+/* ========================
+   Main properties
+   ======================== */
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -75,6 +87,12 @@ hr {
     border-radius: 20px;
     box-shadow: 2px 2px 5px black;
 }
+
+
+
+/* ========================
+   Form properties
+   ======================== */
 
 form {
     width: 95%;
@@ -108,6 +126,12 @@ label {
     cursor: pointer;
     margin-bottom: 20px;
 }
+
+
+
+/* ========================
+   Input properties
+   ======================== */
 
 input {
     width: 100%;
@@ -143,7 +167,29 @@ select {
     width: 50%;
 }
 
-/* Checkbox and radio line break fixes */
+textarea {
+    width: 100%;
+    height: 115px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 500px;
+    padding: 10px;
+    font-size: 1em;
+    line-height: 1.15em;
+}
+
+textarea:focus {
+    outline: none !important;
+    border: 2px solid #9720ac;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* ========================
+   Checkbox and radio line break fixes
+   ======================== */
+   /* Perhaps messy code? */
 
 .input-checkbox label {
     margin-bottom: 0;
@@ -170,22 +216,11 @@ select {
     margin-bottom: 15px;
 }
 
-textarea {
-    width: 100%;
-    height: 115px;
-    display: block;
-    margin-top: 5px;
-    margin-bottom: 500px;
-    padding: 10px;
-    font-size: 1em;
-    line-height: 1.15em;
-}
 
-textarea:focus {
-    outline: none !important;
-    border: 2px solid #9720ac;
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-}
+
+/* ========================
+   Submit button properties
+   ======================== */
 
 button {
     background: #2f005c;
@@ -217,6 +252,12 @@ button:active {
     margin-bottom: 25px;
     font-size: 1.5em;
 }
+
+
+
+/* ========================
+   Footer properties
+   ======================== */
 
 .footer-container {
     background: rgb(47,0,92);
