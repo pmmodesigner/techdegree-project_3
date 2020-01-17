@@ -7,7 +7,17 @@ body {
     background: rgb(47,0,92);
     background: linear-gradient(180deg, rgba(47,0,92,1) 0%, rgba(10,0,17,1) 100%);
     color: white;
-    margin: 0px;
+    /* margin: 0; */
+}
+  
+h3 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 15px 0 15px 0;
+}
+
+hr {
+    margin: 10px 0 30px 0;
 }
 
 
@@ -16,7 +26,7 @@ body {
    Header properties
    ======================== */
 
-   .header-banner {
+.header-banner {
     background-image: url("../_images/code_background.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +62,7 @@ body {
 
 .header-intro {
     padding-top: 25px;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
     margin: auto;
     width: 90%;
     text-align: center;
@@ -64,6 +74,18 @@ body {
    Main properties
    ======================== */
 
+.main-container {
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.3);
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+}
+
 
 
 /* ========================
@@ -71,7 +93,7 @@ body {
    ======================== */
 
 form {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -83,75 +105,81 @@ fieldset {
 }
 
 legend {
-    margin: 0 auto;
+    margin:0 auto;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-legend {
     font-size: 1.5em;
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 25px;
 }
 
 label {
+    width: 100%;
     display: inline-block;
-    font-size: 1.125em;
-    margin-top: 20px;
-    margin-bottom: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: 1px;
     cursor: pointer;
+    /* margin-bottom: 50px; */
 }
 
-input[type="text"] {
-    display: inline-block;
+
+
+/* ========================
+   Input properties
+   ======================== */
+
+
+    input[id="name"],
+    input[id="email"],
+    input[id="phone"],
+    input[id="address"],
+    input[id="city"],
+    input[id="state"] {
     width: 100%;
     height: 40px;
+    margin-top: 5px;
+    /* margin-bottom: 500px;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1em;
     text-align: left;
-}
+} */
 
 input:focus {
     outline: none !important;
     border: 3px solid #9720ac;
 }
 
-::placeholder {
-    color: #000000;
+.input-label {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.input-textbox {
+    margin-bottom: 15px;
 }
 
 select {
+    margin-bottom: 25px;
+	height: 40px;
     display: inline-block;
-    width: 100%;
-    height: 40px;
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 0;
-    border: none;
-    outline: none;
-    appearance: none;
-    cursor: pointer;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-    display: inline-block;
-    margin-bottom: 0;
-    margin-right: 15px;
 }
 
 #zip {
-    width: 33%;
-}
-
-hr {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    width: 50%;
 }
 
 textarea {
-    display: inline-block;
     width: 100%;
     height: 115px;
+    display: block;
     margin-top: 5px;
+    margin-bottom: 500px;
     padding: 10px;
     font-size: 1em;
     line-height: 1.15em;
@@ -159,23 +187,52 @@ textarea {
 
 textarea:focus {
     outline: none !important;
-    border: 3px solid #9720ac;
+    border: 2px solid #9720ac;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
-.newletter-choices {
-    display: inline-block;
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+
+/* ========================
+   Checkbox and radio line break fixes
+   ======================== */
+   /* Perhaps messy code? */
+
+.checkbox-inputs {
+    width: 50%;
+    display: inline;
+    clear: both;
 }
 
-.newletter-choices:first-child {
-    margin-top: 0;
+.radio-inputs {
+    width: inherit;
+    display: inline;
+    clear: both;
 }
 
-.newletter-choices:last-child {
+/* .input-checkbox label {
     margin-bottom: 0;
+    max-height: 18px;
+}
+
+[id$="-news"] {
+    width: auto;
+}
+
+[type="checkbox"] {
+    max-height: 18px
+}
+
+[id^="news-format-"] {
+    width: auto;
+}
+
+[type="radio"] {
+    max-height: 18px */
+}
+
+.select-input-line {
+    margin-bottom: 15px;
 }
 
 
@@ -184,40 +241,35 @@ textarea:focus {
    Submit button properties
    ======================== */
 
-.button-container {
-    display: inline-block;
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 1.125em;
-}
-
 button {
-    display: inline-block;
-    margin: auto;
     background: #2f005c;
     color: white;
     border: none;
     border-radius: 10px;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
     padding: 16px 40px;
     text-decoration: none;
     letter-spacing: 1px;
-    appearance: none;
-    cursor: pointer;
 }
 
 button:hover {
     background: rgb(47,0,92);
-    background: linear-gradient(0deg, rgba(47,0,92,1) 0%, rgba(151,32,172,1) 100%);
+    background: linear-gradient(180deg, rgba(47,0,92,1) 0%, rgba(151,32,172,1) 100%);
 }
 
 button:active {
     background: rgb(47,0,92);
     background: linear-gradient(180deg, rgba(47,0,92,1) 0%, rgba(10,0,17,1) 100%);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-container {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.5em;
 }
 
 
@@ -243,100 +295,98 @@ button:active {
 
 @media (min-width: 768px) {
 
-    form {
+    .main-container {
         width: 75%;
-        max-width: 860px;
+        max-width: 768px;
+        /* display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; */
     }
+/* 
+    label {
+        flex-grow: 1;
+    }
+
+    input {
+        flex-grow: 5;
+        width: unset;
+    } */
 
     br {
         display: none;
     }
 
-    label {
+    input[id="name"],
+    input[id="email"],
+    input[id="phone"],
+    input[id="address"],
+    input[id="city"],
+    input[id="state"] {
+        width: 70%;
+        /* height: 40px;
+        margin-top: 5px; */
+
+    form label {
+        display: inline-block;
         float: left;
+        text-align: left;
         width: 27%;
         height: 40px;
-        margin-top: 20px;
-        margin-bottom: 5px;
+        /* margin-right: 1em ; */
+        margin-top: 30px;
     }
 
-    input[type="text"] {
+    form input {
+        display: inline-block;
+        float: right;
+        text-align: left;
+        width: 70%;
+        height: 40px;
+        /* margin-right: 1em; */
+        margin-top: 20px;
+    }
+
+    form select {
+        display: inline;
         float: right;
         width: 70%;
         height: 40px;
-        margin-top: 20px;
-        margin-bottom: 5px;
-    }
-
-    select {
-        display: inline-block;
-        float: right;
-        width: 70%;
-        height: 40px;
-        margin-top: 20px;
-        margin-bottom: 5px;
-        appearance: none;
-        cursor: pointer;
-    }
-
-    .select-top-margin {
-        float: right;
-        display: inline-block;
+        text-align: left;
+        /* margin-right: 1em; */
         margin-top: 20px;
     }
 
-    .zip-container {
+    .input-label {
+        margin-bottom: 0;
+        /* display: inline-block; */
+    }
+
+    .input-textbox {
+        margin-bottom: 10px;
+        /* display: inline-block; */
+    }
+
+    label[for="state"] {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .zip-media-width-768 {
+        margin-top: 0px;
         display: inline-block;
         width: 100%;
     }
 
     label[for="zip"] {
-        display: inline-block;
-        width: 27%;
-        margin-right: 3%;
-    }
-
-    .zip-input-float-container { 
-        float: right;
-        width: 70%;
-    }
-
-    input[id=zip] {
-        display: inline-block;
-        float: left;
-        width: 50%;
-    }
-
-    .choices-sans-p {
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        flex-wrap: wrap; */
-        width: 100%;
+        /* margin-right: 50px; */
         margin-top: 20px;
-        margin-bottom: 20px;
+        width: 30%;
     }
 
-    .newletter-choices-item {
-        display: block;
-        width: 100%;
-    }
-
-    input[type="checkbox"],
-    input[type="radio"] {
-        float: left;
-        margin-right: 15px;
-        height: 40px;
+    #zip {
         margin-top: 10px;
-        margin-bottom: 5px;
-    }
-
-    label[for="html-news"],
-    label[for="css-news"],
-    label[for="javascript-news"],
-    label[for="news-format-html"],
-    label[for="news-format-plain-text"] {
-        margin-top: 20px;
+        width: 33%;
+        float: left;
     }
 
     .clearfix::after {
@@ -344,5 +394,11 @@ button:active {
         clear: both;
         display: table;
       }
+
+    /* . {
+        display: inline;
+        float: right;        
+    }
+     */
 
 }
