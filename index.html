@@ -6,9 +6,9 @@
         <meta charset="utf-8">
         <title>The Code Review :: Newsletter Signup</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="_css/styles.css">
-        <link rel="stylesheet" href="_css/normalize.css">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="_css/normalize.css">
+        <link rel="stylesheet" href="_css/styles.css">
     </head>
 
 
@@ -41,10 +41,10 @@
                     <input id="name" type="text" name="user-name" placeholder="John Smith" required><br>
 
                     <label for="email">Email Address*</label><br>
-                    <input id="email" type="text" name="user-email" placeholder="email@website.com" required><br>
+                    <input id="email" type="email" name="user-email" placeholder="email@website.com" required><br>
 
                     <label for="phone">Phone Number</label><br>
-                    <input id="phone" type="text" name="user-phone" placeholder="123-456-7890"><br>
+                    <input id="phone" type="tel" name="user-phone" placeholder="123-456-7890"><br>
 
                     <label for="address">Street Address</label><br>
                     <input id="address" type="text" name="user-address" placeholder="123 Avenue Street"><br>
@@ -143,7 +143,8 @@
 
                     <div class="newletter-choices">
                         <p>Other topics you'd like to hear about:</p>
-                        <textarea></textarea><br>
+                        <label for="other-topics">Other Topics</label>
+                        <textarea id="other-topics" name="other-topics-input"></textarea><br>
                     </div>
 
                 </fieldset>
